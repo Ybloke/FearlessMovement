@@ -1,160 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-    <link rel="icon" type="image/jpg" href="/FM_PrimaryLogo_GreenBackground_RGB.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fearless Movement | Pilates & Mindful Stretching</title>
+    <title>Fearless Movement | Pilates & Strength Oak Flats</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="/FM_PrimaryLogo_GreenBackground_RGB.jpg">
+    
     <style>
-        /* Color Palette from Logo */
         :root {
-            --teal-bg: #60a79d;      /* The main background teal */
-            --cream-text: #f1f0e2;   /* The soft off-white from the logo */
-            --dark-teal: #4a827a;    /* A deeper shade for contrast */
+            /* VIBRANT BRAND PALETTE - Based on your assets */
+            --primary-sage: #69ad9e;    /* Deepened for better contrast */
+            --background-sand: #F5F2EA;  /* Warm base */
+            --accent-orange: #E68A39;   /* Saturated for "pop" */
+            --brand-rose: #EBB6B6;      /* Defined Rose */
+            --deep-charcoal: #2D3436;   /* Richer text */
+            --white: #FFFFFF;
+            --soft-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
-        body { 
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
-            margin: 0; 
-            background-color: var(--cream-text); 
-            color: #333; 
-            line-height: 1.8; 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-sand);
+            color: var(--deep-charcoal);
+            line-height: 1.8;
         }
 
-        .container { width: 85%; margin: auto; max-width: 1100px; }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
 
-        /* Navigation */
-        header { 
-            background: var(--teal-bg); 
-            padding: 25px 0; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        header .logo-text { 
-            float: left; 
-            color: var(--cream-text); 
-            font-size: 22px; 
-            letter-spacing: 3px; 
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-        header nav { float: right; margin-top: 5px; }
-        header nav a { 
-            color: var(--cream-text); 
-            text-decoration: none; 
-            margin-left: 30px; 
-            font-size: 14px; 
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 8rem 0; }
+
+        /* BUTTONS - High Visibility */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-orange); /* Orange stands out most */
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(230, 138, 57, 0.3);
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 0.9rem;
         }
 
-        /* Hero Section */
-        #hero { 
-            padding: 100px 0;
-            background: linear-gradient(rgba(96, 167, 157, 0.7), rgba(96, 167, 157, 0.7)), 
-                        url('https://images.unsplash.com') no-repeat center center/cover;
-            text-align: center; 
-            color: var(--cream-text);
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: var(--primary-sage);
+            box-shadow: 0 8px 20px rgba(115, 147, 129, 0.3);
         }
-        #hero h1 { font-size: 3rem; font-weight: 300; letter-spacing: 5px; margin-bottom: 10px; }
-        #hero p { font-size: 1.2rem; font-style: italic; opacity: 0.9; }
 
-        /* Pilates Focus Sections */
-        section { padding: 80px 0; }
-        .intro-text { text-align: center; max-width: 700px; margin: 0 auto 50px; }
-        
-        .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .class-card { 
-            background: #fff; 
-            padding: 40px; 
-            border-radius: 2px; 
-            border-bottom: 4px solid var(--teal-bg);
+        /* 1. HERO - Warm & Welcoming */
+        .hero {
+            background: linear-gradient(135deg, var(--background-sand) 0%, #EAE4D5 100%);
+            text-align: center;
+            padding-top: 10rem;
+            padding-bottom: 8rem;
+        }
+
+        .brand-name {
+            color: var(--primary-sage);
+            font-weight: 600;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 { font-size: clamp(3rem, 8vw, 5rem); color: var(--deep-charcoal); margin-bottom: 2rem; }
+
+        /* 2. ABOUT - Clean White */
+        .about { background: var(--white); text-align: center; }
+        .about h2 { color: var(--primary-sage); font-size: 3rem; }
+
+        /* 3. EMOTIONAL SECTION - Rose Pop */
+        .emotional-connection { background-color: var(--brand-rose); }
+        .emotional-card {
+            background: var(--white);
+            padding: 5rem;
+            border-radius: 40px;
+            box-shadow: var(--soft-shadow);
+        }
+        .emotional-card h2 { color: var(--accent-orange); margin-bottom: 2rem; }
+
+        /* 4. FOR YOU - Sage Accents */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(115, 147, 129, 0.1);
             transition: 0.3s;
         }
-        .class-card h3 { color: var(--teal-bg); text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Call to Action */
-        .cta-btn { 
-            display: inline-block; 
-            background: var(--teal-bg); 
-            color: var(--cream-text); 
-            padding: 15px 40px; 
-            text-decoration: none; 
-            border-radius: 30px; 
-            margin-top: 30px;
-            transition: background 0.3s;
-        }
-        .cta-btn:hover { background: var(--dark-teal); }
+        .card:hover { border-color: var(--primary-sage); transform: translateY(-5px); }
 
-        /* Footer */
-        footer { 
-            background: var(--teal-bg); 
-            color: var(--cream-text); 
-            padding: 60px 0; 
-            text-align: center; 
+        .card::before {
+            content: "✦";
+            display: block;
+            color: var(--primary-sage);
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
-        /* Mobile */
-        @media(max-width: 768px) {
-            header .logo-text, header nav { float: none; text-align: center; display: block; }
-            header nav { margin-top: 20px; }
-            header nav a { margin: 0 10px; }
+        /* 5. CLASS INFO - Full Sage Background */
+        .class-info {
+            background: var(--primary-sage);
+            color: var(--white);
+            text-align: center;
+        }
+        .class-info h2 { color: var(--white); font-size: 3.5rem; }
+
+        /* 6. FORM - Sand Focus */
+        .waitlist { background: var(--background-sand); }
+        .form-box {
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 40px;
+            max-width: 600px;
+            margin: 3rem auto 0;
+            box-shadow: var(--soft-shadow);
+        }
+
+        input {
+            width: 100%;
+            padding: 1.2rem;
+            border: 2px solid var(--background-sand);
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        input:focus { outline: none; border-color: var(--primary-sage); }
+
+        /* 7. CONTACT */
+        .contact { text-align: center; padding-bottom: 4rem; background: var(--white); }
+        .contact a { color: var(--primary-sage); text-decoration: none; font-weight: 600; }
+
+        .footer { background: var(--white); padding-bottom: 3rem; text-align: center; opacity: 0.4; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            section { padding: 5rem 0; }
+            .emotional-card, .form-box { padding: 2.5rem; border-radius: 25px; }
+            .hero h1 { font-size: 2.8rem; }
         }
     </style>
-</head>
-<body>
+<body>  
+    </head>
+        <div class="brand-name" style="background-color: #69ad9e; display: flex; justify-content: center;">
+        <img src="FM_PrimaryLogo_GreenBackground_RGB.png" 
+         width="300" 
+         alt="Fearless Movement logo">
+        </div>
+    </head>
 
-    <header>
+    <header class="hero">
         <div class="container">
-            <div class="logo-text">FEARLESS MOVEMENT</div>
-            <img src="images/FearlessMovement Logo.jpg"  alt="">
-            <nav>
-                <a href="#about">Philosophy</a>
-                <a href="#classes">Classes</a>
-                <a href="#join">Book A Mat</a>
-            </nav>
+            <h1>Feel Strong Again.<br>In Your Body.<br>In Your Life.</h1>
+            <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 3rem;">Small group Pilates + strength classes designed for women who want to move better, build strength, and feel like themselves again.</p>
+            <a href="#join" class="btn">Join the Waitlist</a>
         </div>
     </header>
 
-    <section id="hero">
+    <section class="about">
         <div class="container">
-            <h1>FIND YOUR FLOW</h1>
-            <p>Elegance in motion. Strength in stillness.</p>
-            <a href="#join" class="cta-btn">START YOUR JOURNEY</a>
+            <h2>Hi, I’m Mel.</h2>
+            <p style="max-width: 750px; margin: 2rem auto;"> I’m a Pilates and strength coach, and I’ve spent several years supporting women to move better, build strength, and feel more capable in their bodies. My classes are designed to feel supportive, not overwhelming — with a focus on real strength, mobility, nervous system support, and long-term health." </p>
         </div>
     </section>
 
-    <section id="classes">
+    <section class="emotional-connection">
         <div class="container">
-            <div class="intro-text">
-                <h2 style="color: var(--teal-bg); letter-spacing: 2px;">THE PRACTICE</h2>
-                <p>We focus on controlled movements that lengthen and strengthen the body, using the core as the powerhouse of every movement.</p>
-            </div>
-            
-            <div class="class-grid">
-                <div class="class-card">
-                    <h3>Classic Pilates</h3>
-                    <p>Focus on posture, core stability, and muscle balance using traditional mat sequences.</p>
-                </div>
-                <div class="class-card">
-                    <h3>Deep Stretch</h3>
-                    <p>A restorative session focused on connective tissue and increasing your natural range of motion.</p>
-                </div>
-                <div class="class-card">
-                    <h3>Flow & Alignment</h3>
-                    <p>Synchronize breath with movement to improve flexibility and mental clarity.</p>
-                </div>
+            <div class="emotional-card">
+                <h2>Exercise shouldn't feel like a battle.</h2>
+                <p>If you've ever felt pushed too hard, unsupported, or like you were constantly "falling behind," you aren't alone. <strong>These classes are different.</strong></p>
+                <p>No drill-sergeants. No pressure to prove yourself. Just guidance and a structured way to rebuild strength at your own pace.</p>
             </div>
         </div>
     </section>
 
-    <footer id="join">
+    <section class="for-you">
         <div class="container">
-            <h2>Fearless Movement</h2>
-            <p>mel@fearlessmovement.com.au</p>
-            <div style="margin-top: 20px; font-size: 12px; opacity: 0.8; letter-spacing: 1px;">
-                &copy; 2024 FEARLESS MOVEMENT | ALL RIGHTS RESERVED
+            <h2 style="text-align:center; font-size: 2.5rem;">This is for you if...</h2>
+            <div class="grid">
+                <div class="card">Your body feels stiff, tight, or not like it used to.</div>
+                <div class="card">You want to get stronger but feel unsure where to start.</div>
+                <div class="card">Group classes have felt overwhelming or too fast.</div>
+                <div class="card">You want to feel strong, capable, and like yourself again.</div>
             </div>
         </div>
+    </section>
+
+    <section class="class-info">
+        <div class="container">
+            <h2>Coming Soon to Oak Flats</h2>
+            <p style="font-size: 1.3rem;">Limited spots available for our founding members. <br>Timetable released soon.</p>
+        </div>
+    </section>
+
+    <section id="join" class="waitlist">
+        <div class="container">
+            <h2 style="text-align:center;">Join the Waitlist</h2>
+            <div class="form-box">
+                <form action="#" method="POST">
+                    <label style="display:block; margin-bottom: .5rem; font-weight: 600;">Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                    <label style="display:block; margin-bottom: .5rem; font-weight: 600;">Email</label>
+                    <input type="email" placeholder="hello@example.com" required>
+                    <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer;">Secure My Spot</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <p><strong>Fearless Movement</strong> | Oak Flats, NSW</p>
+            <p><a href="mailto:mel@fearlessmovement.com.au">mel@fearlessmovement.com.au</a> • 0425 225 231</p>
+            <p style="margin-top: 1rem;"><a href="https://www.instagram.com/fearless__movement_/?hl=en" style="color: var(--accent-orange);">Instagram</a></p>
+            <p style="margin-top: 1rem;"><a href="https://www.facebook.com/fearlessmovementwithpilates/" style="color: var(--accent-orange);">Facebook</a></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        Fearless Movement © 2026
     </footer>
 
 </body>
